@@ -17,7 +17,6 @@
             <a href="#new">New</a>
             <a href="#open">Open</a>
             <a href="#save">Save</a>
-            <a href="#save">Export</a>
           </div>
         </li>
         <li><a href="#about">Acerca de</a></li>
@@ -25,6 +24,26 @@
       </ul>
     </nav>
   </header>
+
+  <script>
+    // Script para manejar el menú desplegable
+    document.querySelector('.dropbtn').addEventListener('click', function(event) {
+      event.preventDefault();
+      document.querySelector('.dropdown-content').classList.toggle('show');
+    });
+
+    // Cerrar el menú si se hace clic fuera de él
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName('dropdown-content');
+        for (var i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
-CSS (styles.css)
