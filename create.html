@@ -12,12 +12,12 @@
     <nav>
       <ul class="nav-links">
         <li class="dropdown">
-          <a href="#" class="dropbtn">File</a>
-          <div class="dropdown-content">
-            <a href="#new">New</a>
-            <a href="#open">Open</a>
-            <a href="#save">Save</a>
-          </div>
+          <select class="dropbtn">
+            <option value="" disabled selected>File</option>
+            <option value="#new">New</option>
+            <option value="#open">Open</option>
+            <option value="#save">Save</option>
+          </select>
         </li>
         <li><a href="#about">Acerca de</a></li>
         <li><a href="#contact">Contacto</a></li>
@@ -26,24 +26,12 @@
   </header>
 
   <script>
-    // Script para manejar el menú desplegable
-    document.querySelector('.dropbtn').addEventListener('click', function(event) {
-      event.preventDefault();
-      document.querySelector('.dropdown-content').classList.toggle('show');
-    });
-
-    // Cerrar el menú si se hace clic fuera de él
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName('dropdown-content');
-        for (var i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
-        }
+    document.querySelector('.dropbtn').addEventListener('change', function() {
+      var selectedValue = this.value;
+      if (selectedValue) {
+        window.location.href = selectedValue;
       }
-    }
+    });
   </script>
 </body>
 </html>
