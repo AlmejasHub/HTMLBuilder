@@ -11,6 +11,12 @@ body {
   align-items: center;
   padding: 10px 20px;
 }
+
+.logo img {
+  max-width: 500px;
+  height: auto;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -30,8 +36,34 @@ body {
   background: none;
   border: none;
   cursor: pointer;
+  appearance: none; /* Elimina el estilo predeterminado del select */
 }
 
 .nav-links a:hover, .dropbtn:hover {
   text-decoration: underline;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #E34F26;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #d44523;
+}
+
+/* Estilo para los elementos del dropdown */
+.dropbtn option {
+  color: black; /* Cambia el color del texto de las opciones */
 }
