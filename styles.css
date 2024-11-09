@@ -36,13 +36,15 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  appearance: none; /* Elimina el estilo predeterminado del select */
+  appearance: none; 
 }
 
 .nav-links a:hover, .dropbtn:hover {
   text-decoration: underline;
 }
-
+.dropbtn option {
+  color: black; /* Cambia el color del texto de las opciones */
+}
 .input-group {
   display: flex;
   gap: 10px;
