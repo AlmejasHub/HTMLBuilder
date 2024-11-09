@@ -50,11 +50,16 @@ body {
   color: white;
   border-radius: 5px;
   padding: 8px 12px;
+  position: relative;
+  font-weight: bold; /* Negrita para el dropdown */
 }
 
 .dropbtn::after {
   content: '▼';
-  margin-left: 5px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 12px;
 }
 
