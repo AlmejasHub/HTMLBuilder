@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-weight: bold;
+  font-weight: bold; /* Todo el cuerpo en negrita */
 }
 
 .top-bar {
@@ -38,10 +38,24 @@ body {
   border: none;
   cursor: pointer;
   appearance: none;
+  font-weight: bold; /* Dropdown en negrita */
 }
 
 .nav-links a:hover, .dropbtn:hover {
   text-decoration: underline;
+}
+
+.dropbtn {
+  background-color: #d44523;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+}
+
+.dropbtn::after {
+  content: '▼';
+  margin-left: 5px;
+  font-size: 12px;
 }
 
 .input-group {
@@ -66,6 +80,9 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .custom-file-upload:hover {
