@@ -40,6 +40,71 @@
       <option value="#button">Button</option>
     </select>
   </div>
+  <div id="dynamic-fields"></div>
+
+  <script>
+    var pageContent = {
+      paragraphs: []
+    };
+
+    document.querySelector('.dropbtn').addEventListener('change', function() {
+      var selectedValue = this.value;
+      if (selectedValue) {
+        window.location.href = selectedValue;
+      }
+    });
+
+    document.getElementById('add-object-dropdown').addEventListener('change', function() {
+      var selectedValue = this.value;
+      if (selectedValue === 'paragraph') {
+        addParagraphFields();
+      }
+    });
+
+    function addParagraphFields() {
+      var container = document.createElement('div');
+      container.classList.add('form-group');
+      container.innerHTML = `
+        <div class="form-group">
+          <label for="paragraph-text">Paragraph Text:</label>
+          <input type="text" class="paragraph-text text-input" placeholder="Enter paragraph text...">
+        </div>
+        <div class="form-group">
+          <label for="paragraph-class">Class:</label>
+          <input type="text" class="paragraph-class class-input" placeholder="Class">
+        </div>
+        <div class="form-group">
+          <label for="paragraph-color">Color:</label>
+          <input type="color" class="paragraph-color color-input">
+        </div>
+      `;
+
+      document.getElementById('dynamic-fields').appendChild(container);
+      
+      var paragraph = {
+        text: "",
+        color: "",
+        class: ""
+      };
+      
+      pageContent.paragraphs.push(paragraph);
+
+      var paragraphIndex = pageContent.paragraphs.length - 1;
+
+      container.querySelector('.paragraph-text').addEventListener('input', function() {
+        pageContent.paragraphs[paragraphIndex].text = this.value;
+      });
+
+      container.querySelector('.paragraph-class').addEventListener('input', function() {
+        pageContent.paragraphs[paragraphIndex].class = this.value;
+      });
+
+      container.querySelector('.paragraph-color').addEventListener('input', function() {
+        pageContent.paragraphs[paragraphIndex].color = this.value;
+      });
+
+      console.log(pageContent);
+    }
+  </script>
 </body>
-<script src="close.js"></script>
 </html>
