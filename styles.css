@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-weight: bold; /* Todo el cuerpo en negrita */
+  font-weight: bold; 
+  background-color: #ffe7e0;
 }
 
 .top-bar {
