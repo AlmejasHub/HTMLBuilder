@@ -30,17 +30,22 @@
       <label for="file-upload" class="custom-file-upload"><img src="images/upload.png" alt="Upload" width="25" height="auto">Upload your Icon!</label>
     </div>
   </header>
+
+  <div class="add-object">
+    <select class="dropbtn-green">
+      <option value="" disabled selected>+ Add a new object</option>
+      <option value="#paragraph">Paragraph</option>
+      <option value="#image">Image</option>
+      <option value="#button">Button</option>
+    </select>
+  </div>
+
   <script>
     document.querySelector('.dropbtn').addEventListener('change', function() {
       var selectedValue = this.value;
       if (selectedValue) {
         window.location.href = selectedValue;
       }
-    });
-
-    window.addEventListener("beforeunload", function (e) {
-        e.preventDefault();
-        e.returnValue = ''; // Algunos navegadores requieren esta línea
     });
   </script>
 </body>
