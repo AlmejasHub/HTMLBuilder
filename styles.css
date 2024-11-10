@@ -1,8 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-weight: bold; 
-  background-color: #ffe7e0;
+  font-weight: bold; /* Todo el cuerpo en negrita */
 }
 
 .top-bar {
@@ -64,50 +63,33 @@ body {
   font-size: 12px;
 }
 
-.add-object {
-  margin: 20px;
+.input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
-.dropbtn-green {
-  background-color: #28a745; /* Color verde */
+.input-group input[type="text"] {
+  padding: 5px;
+  font-size: 16px;
+}
+
+#file-upload {
+  display: none;
+}
+
+.custom-file-upload {
+  background-color: #d44523;
   color: white;
-  border-radius: 5px;
   padding: 8px 12px;
-  font-size: 16px;
-  font-weight: bold; /* Negrita para el dropdown */
-  cursor: pointer;
-  appearance: none;
-}
-
-.dropbtn-green::after {
-  content: '▼';
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 12px;
-}
-
-.dropbtn-green:hover {
-  background-color: #218838; /* Color verde oscuro al pasar el ratón */
-}
-
-.form-group {
-  margin: 20px 0;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  padding: 8px;
-  width: 100%;
-  max-width: 400px;
-  border: 1px solid #ccc;
   border-radius: 5px;
+  cursor: pointer;
   font-size: 16px;
-  background-color: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra por fuera */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.custom-file-upload:hover {
+  background-color: #c43d1d;
 }
