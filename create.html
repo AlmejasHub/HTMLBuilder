@@ -40,8 +40,10 @@
   </script>
     <script>
       window.addEventListener("beforeunload", function (e) {
-    e.preventDefault();
-    e.returnValue = ''; 
+    var confirmationMessage = "¿Estás seguro de que quieres salir de esta página?";
+    
+    (e || window.event).returnValue = confirmationMessage; // Compatibilidad con IE y Firefox
+    return confirmationMessage; // Compatibilidad con otros navegadores
 });
     </script>
 </body>
