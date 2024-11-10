@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  font-weight: bold; /* Todo el cuerpo en negrita */
+  font-weight: bold; 
+  background-color: #ffe5d1;
 }
 
 .top-bar {
@@ -38,7 +39,7 @@ body {
   border: none;
   cursor: pointer;
   appearance: none;
-  font-weight: bold; /* Dropdown en negrita */
+  font-weight: bold;
 }
 
 .nav-links a:hover, .dropbtn:hover {
@@ -51,7 +52,7 @@ body {
   border-radius: 5px;
   padding: 8px 12px;
   position: relative;
-  font-weight: bold; /* Negrita para el dropdown */
+  font-weight: bold; 
 }
 
 .dropbtn::after {
@@ -92,4 +93,33 @@ body {
 
 .custom-file-upload:hover {
   background-color: #c43d1d;
+}
+/* CSS anterior... */
+
+.add-object {
+  margin: 20px;
+}
+
+.dropbtn-green {
+  background-color: #28a745; /* Color verde */
+  color: white;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold; /* Negrita para el dropdown */
+  cursor: pointer;
+  appearance: none;
+}
+
+.dropbtn-green::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+
+.dropbtn-green:hover {
+  background-color: #218838; 
 }
