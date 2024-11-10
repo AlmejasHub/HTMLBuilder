@@ -37,12 +37,13 @@
         window.location.href = selectedValue;
       }
     });
-    window.addEventListener("beforeunload", function (e) {
+  </script>
+    <script>
+      window.addEventListener("beforeunload", function (e) {
     e.preventDefault();
     e.returnValue = ''; 
 });
-
-  </script>
+    </script>
 </body>
 </html>
 
