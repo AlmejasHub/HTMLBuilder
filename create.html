@@ -37,15 +37,11 @@
         window.location.href = selectedValue;
       }
     });
+
+    window.addEventListener("beforeunload", function (e) {
+        e.preventDefault();
+        e.returnValue = ''; // Algunos navegadores requieren esta línea
+    });
   </script>
-    <script>
-      window.addEventListener("beforeunload", function (e) {
-    var confirmationMessage = "¿Estás seguro de que quieres salir de esta página?";
-    
-    (e || window.event).returnValue = confirmationMessage; // Compatibilidad con IE y Firefox
-    return confirmationMessage; // Compatibilidad con otros navegadores
-});
-    </script>
 </body>
 </html>
-
